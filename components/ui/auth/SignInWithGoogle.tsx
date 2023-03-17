@@ -23,7 +23,7 @@ export const SignInWithGoogle: React.FC<GoogleProps> = ({}) => {
     <div>
       <button onClick={login} className="mt-2 btn btn-outline btn-primary">
         <Image src={google} width={25} height={25} alt="google icon" />
-        Google
+        Sign in with Google
       </button>
     </div>
   );

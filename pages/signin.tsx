@@ -50,7 +50,7 @@ export default function Signup() {
             type="email"
             name="email"
             id="email"
-            placeholder="joe@joe.com"
+            placeholder="you@email.com"
             className="w-full max-w-xs input input-bordered"
             onChange={(e) => setEmail(e.target.value)}
           />

@@ -21,10 +21,12 @@ export const Navbar: React.FC<NavProps> = ({}) => {
   const supabase = useSupabaseClient();
   const user = useUser();
   const router = useRouter();
+  const currentPath = router.pathname;
 
   useEffect(() => {
     if (user) {
       getProfile();
+      console.log("user", user);
     }
   }, [user]);
 
@@ -52,7 +54,7 @@ export const Navbar: React.FC<NavProps> = ({}) => {
 
   return (
     <div>
-      {!user ? (
+      {currentPath === "/signin" ? (
         <div className="navbar bg-base-100">
           <div className="navbar-start">
             <a className="text-xl normal-case btn btn-ghost">Gambit</a>
